@@ -8,8 +8,8 @@
 
 /*===== Colores =====*/
 :root{
-  /* --first-color: #d6924e; */
-  --first-color: #cc7722;
+  /* --first-color: #ff9500; */
+  --first-color: #ff9500;
   --second-color: #0E2431;
   --third-color: #FAFAFA;
 }
@@ -463,4 +463,138 @@ img{
   .home__img{
     right: 10%;
   }
+}
+
+.delete-account {
+  padding: 50px 0;
+  background-color: #fff;
+  /* or any color that fits your design */
+}
+
+.delete-account__container {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 30px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* subtle shadow for depth */
+  border-radius: 8px;
+  /* rounded corners */
+  overflow: hidden;
+  /* ensures the child elements adhere to the border radius */
+}
+
+.delete-account__logo-container {
+  position: relative;
+  text-align: center;
+  padding: 30px;
+  background-color: #f3f3f3;
+  /* light grey background for the logo section */
+}
+
+.delete-account__logo {
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /* centers the logo */
+}
+
+.delete-account__form-container {
+  padding: 20px;
+}
+
+.delete-account__title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  /* darker text for better readability */
+}
+
+.delete-account__form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.delete-account__input {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.delete-account__button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff9500;
+  /* bright color for the action button */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-account__button:hover {
+  background-color: #cc7a00;
+  /* darker shade on hover */
+}
+
+.delete-account__app-name {
+  font-size: 20px;
+  color: rgb(0, 28, 55);
+  margin-top: 10px;
+  /* space between the logo and the app name */
+}
+
+.footer__branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center everything in the branding container */
+  padding: 20px;
+  background-color: rgba(0, 0, 0, .15);
+  /* Example dark background color */
+  color: white;
+  /* Adjust text color for contrast */
+}
+
+.footer__logo {
+  width: 80px;
+  /* Or your preferred size */
+  margin-bottom: 10px;
+  /* Spacing between logo and app name */
+}
+
+.footer__app-name {
+  margin-bottom: 5px;
+  /* Spacing between app name and privacy policy link */
+}
+
+.footer__policy-link {
+  color: white;
+  /* Adjust for contrast against background */
+  text-decoration: none;
+  /* Optional style */
+}
+
+.footer__policy-link:hover {
+  text-decoration: underline;
+  /* Optional style */
+}
+
+/* Ensure the rest of the footer content is aligned as desired */
+.footer__social {
+  /* ... Your existing styles ... */
+  justify-content: center;
+  /* Center social icons */
+}
+
+.footer__copy {
+  /* ... Your existing styles ... */
+  text-align: center;
+  /* Center copy text */
 }

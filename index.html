@@ -26,6 +26,8 @@
                         <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                         <li class="nav__item"><a href="#project" class="nav__link">Projects</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                        <li class="nav__item"><a href="#delete-account" class="nav__link">Delete Account</a></li>
+
                     </ul>
                 </div>
                 <!-- Theme Change Button -->
@@ -228,7 +230,7 @@
                 <h2 class="section-title">Let's Get In Touch</h2>
 
                 <div class="contact__container bd-grid">
-                    <form action="https://formsubmit.co/sujisujeeth21@gmail.com" method="POST" class="contact__form">
+                    <form action="https://formsubmit.co/sr.sujeeth21@gmail.com" method="POST" class="contact__form">
                         <input type="text" name="name" placeholder="Name" class="contact__input">
                         <input type="hidden" name="_subject" value="New submission!">
                         <input type="mail" name="email" placeholder="Email" class="contact__input">
@@ -243,20 +245,75 @@
             </section>
         </main>
 
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title">Sujeeth S.R</p>
-            <div class="footer__social">
-                <!-- <a href="https://www.facebook.com//" target="_blank" class="footer__icon"><i class='bx bxl-facebook-circle' ></i></a> -->
-                <a href="https://www.instagram.com/infernalboii/" target="_blank" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <!-- <a href="https://twitter.com/" target="_blank" class="footer__icon"><i class='bx bxl-twitter' ></i></a> -->
-                <a href="https://www.linkedin.com/in/sujeethsr/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/SujeethSR" target="_blank" class="footer__icon"><i class='bx bxl-github'></i></a>
-                <a href="mailto:sujisujeeth21@gmail.com" target="_blank" class="footer__icon"><i class='bx bx-envelope'></i></a>
-            </div>
-            <p>&#169; Copyright 2022 Sujeeth S.R - All Rights Reserved</p>
-        </footer>
+<!--===== DELETE ACCOUNT SECTION =====-->
+<section class="delete-account section" id="delete-account">
+    <div class="delete-account__container bd-grid">
+        <div class="delete-account__logo-container">
+            <img src="./assets/img/connect-logo-mark.png" alt="Connect App Logo" class="delete-account__logo">
+            <h3 class="delete-account__app-name">UTA - Connect App</h3>
+        </div>
 
+        <div class="delete-account__form-container">
+            <h2 class="delete-account__title">Account Deletion Request</h2>
+            <form action="https://formsubmit.co/sr.sujeeth21@gmail.com" method="POST" class="delete-account__form"
+                id="delete-account-form">
+                <input type="hidden" name="_subject" value="Account Deletion Request">
+                <input type="email" name="email" placeholder="Your Email" class="delete-account__input"
+                    pattern=".+@mavs\.uta\.edu" title="Please use your MAVS UTA email." required>
+                <textarea name="reason" placeholder="Reason for deletion" class="delete-account__input"
+                    required></textarea>
+                <input type="submit" value="Request Deletion" class="delete-account__button">
+                <input type="hidden" name="_autoresponse"
+                    value="Your account deletion request has been received and will be processed.">
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.getElementById('delete-account-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // This is where you'd add the client-side email verification code.
+        // For illustration, we're using a mock function to simulate the process.
+        verifyEmail(this);
+    });
+
+    function verifyEmail(form) {
+        var email = form.querySelector('input[name="email"]').value;
+
+        // Here you'd typically make an AJAX call to your server to handle the email verification.
+        // Since we can't actually send emails from HTML/JavaScript alone, this is a placeholder.
+        console.log('Verification email would be sent to:', email);
+
+        // Inform the user that a verification email has been "sent".
+        alert('A verification email has been sent to ' + email + '. Please check your inbox to confirm.');
+    }
+</script>
+
+<!--===== FOOTER =====-->
+<footer class="footer">
+    <div class="footer__branding">
+        <img src="./assets/img/connect-logo-mark.png" alt="UTA - Connect App Logo" class="footer__logo">
+        <span class="footer__app-name">UTA - Connect App</span>
+        <a href="https://sites.google.com/view/uta-connect/home" target="_blank" class="footer__policy-link">Privacy
+            Policy</a>
+    </div>
+
+    <div class="footer__social">
+        <!-- Social links -->
+        <a href="https://www.instagram.com/sujeeth_vlogs/" target="_blank" class="footer__icon"><i
+                class='bx bxl-instagram'></i></a>
+        <a href="https://www.linkedin.com/in/sujeethsr/" target="_blank" class="footer__icon"><i
+                class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/SujeethSR" target="_blank" class="footer__icon"><i class='bx bxl-github'></i></a>
+        <a href="mailto:sr.sujeeth21@gmail.com" target="_blank" class="footer__icon"><i class='bx bx-envelope'></i></a>
+    </div>
+
+    <p class="footer__copy">&#169; Copyright 2024 Sujeeth S.R - All Rights Reserved</p>
+</footer>
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>
