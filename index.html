@@ -245,42 +245,34 @@
             </section>
         </main>
 
-    <!--===== DELETE ACCOUNT SECTION =====-->
-    <section class="delete-account section" id="delete-account">
-        <div class="delete-account__container bd-grid">
-            <div class="delete-account__logo-container">
-                <img src="./assets/img/connect-logo-mark.png" alt="Connect App Logo" class="delete-account__logo">
-                <h3 class="delete-account__app-name">UTA - Connect App</h3>
-            </div>
-    
-            <div class="delete-account__form-container">
-                <h2 class="delete-account__title">Account Deletion Request</h2>
-                <form action="https://formsubmit.co/sr.sujeeth21@gmail.com" method="POST" class="delete-account__form"
-                    id="delete-account-form">
-                    <input type="hidden" name="_subject" value="Account Deletion Request">
-                    <input type="email" name="email" placeholder="Your Email" class="delete-account__input" required>
-                    <textarea name="reason" placeholder="Reason for deletion" class="delete-account__input"
-                        required></textarea>
-                    <input type="submit" value="Request Deletion" class="delete-account__button">
-                    <input type="hidden" name="_autoresponse"
-                        value="Your account deletion request has been received and will be processed.">
-                    <input type="hidden" name="_captcha" value="false">
-                </form>
-            </div>
+<!--===== DELETE ACCOUNT SECTION =====-->
+<section class="delete-account section" id="delete-account">
+    <div class="delete-account__container bd-grid">
+        <div class="delete-account__logo-container">
+            <img src="./assets/img/connect-logo-mark.png" alt="Connect App Logo" class="delete-account__logo">
+            <h3 class="delete-account__app-name">UTA - Connect App</h3>
         </div>
-    </section>
-    
+
+        <div class="delete-account__form-container">
+            <h2 class="delete-account__title">Account Deletion Request</h2>
+            <form action="https://formsubmit.co/sr.sujeeth21@gmail.com" method="POST" class="delete-account__form"
+                id="delete-account-form">
+                <input type="hidden" name="_subject" value="Account Deletion Request">
+                <input type="email" name="email" placeholder="Your Email" class="delete-account__input" required>
+                <textarea name="reason" placeholder="Reason for deletion" class="delete-account__input"
+                    required></textarea>
+                <input type="submit" value="Request Deletion" class="delete-account__button">
+            </form>
+        </div>
+    </div>
+</section>
+
+    <!--===== SCRIPT FOR SUBMISSION ALERT =====-->
     <script>
         document.getElementById('delete-account-form').addEventListener('submit', function (e) {
-            // Uncomment the next line if you need to perform any checks before submission
+            // Optionally prevent form submission to validate input fields
             // e.preventDefault();
-
-            // Example: validation or logging
-            var email = this.querySelector('input[name="email"]').value;
-            if (!email.includes('@')) {
-                alert('Please enter a valid email address.');
-                e.preventDefault(); // Prevent form submission if the email is not valid
-            }
+            alert('We got your request. Thanks for exploring the Connect App!');
         });
     </script>
 
